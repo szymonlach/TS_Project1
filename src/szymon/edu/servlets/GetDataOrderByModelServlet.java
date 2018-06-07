@@ -13,19 +13,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/GetDataServlet")
-public class GetDataServlet extends HttpServlet {
+@WebServlet("/GetDataOrderByModelServlet")
+public class GetDataOrderByModelServlet extends HttpServlet {
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         Session session = new Configuration().configure().buildSessionFactory().openSession();
-        Query query = session.createQuery("from LaptopsEntity ");
+        Query query = session.createQuery("from LaptopsEntity order by model");
 
         List<LaptopsEntity> laptops = query.list();
         //session.flush();
         session.close();
         request.setAttribute("laptops",laptops);
         request.getRequestDispatcher("laptopDetails.jsp").forward(request,response);
-
     }
 }

@@ -11,11 +11,11 @@
     <title>Manage Laptops</title>
 </head>
 <body>
-<%@page import="java.util.List,szymon.edu.entities.*" %>
 <h2>Insert Laptop</h2>
 <h3>Enter Laptops Details</h3>
 
 <form action="InsertLaptopServlet" method="post">
+
     <table>
         <tr>
             <td>Model</td>
