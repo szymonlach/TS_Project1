@@ -22,10 +22,9 @@ public class GetDataServlet extends HttpServlet {
         Query query = session.createQuery("from LaptopsEntity ");
 
         List<LaptopsEntity> laptops = query.list();
-        //session.flush();
         session.close();
-        request.setAttribute("laptops",laptops);
-        request.getRequestDispatcher("laptopDetails.jsp").forward(request,response);
+        request.setAttribute("laptops", laptops);
+        request.getRequestDispatcher("laptopDetails.jsp").forward(request, response);
 
     }
 }
