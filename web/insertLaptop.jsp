@@ -41,7 +41,7 @@
             <td><input type="text" name="disc"/></td>
         </tr>
         <tr>
-            <td><input type="submit" name="save"/></td>
+            <td><input type="submit" name="save" value="Save"/></td>
         </tr>
     </table>
 </form>

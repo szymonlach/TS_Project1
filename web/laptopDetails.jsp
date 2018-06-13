@@ -33,6 +33,11 @@
             });
         });
     </script>
+    <style>
+        tr:hover{
+            cursor: pointer;
+        }
+    </style>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -41,7 +46,7 @@
     <script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.1/js/responsive.bootstrap.min.js"></script>
 
-    <script type="text/javascript">
+    <script>
         $(document).ready(function () {
             $('#example').DataTable({
                 responsive: {
@@ -62,8 +67,6 @@
     </script>
 </head>
 <body>
-<%@page import="java.util.List,szymon.edu.entities.*" %>
-
 <h4>Available Laptops Details</h4>
 
 <table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
